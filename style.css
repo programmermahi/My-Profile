@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar{
+    background-color: rgb(181, 176, 176);
+    width: 350px;
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+}
+.sidebar nav{
+    padding: 45px;
+}
+.sidebar nav li{
+    list-style: none;
+    font-size: 30px;
+    padding: 33px 0;
+}
+.sidebar nav li a{
+    text-decoration: none;
+  
+}
+.main{
+    /* background-color: yellow; */
+    width: 90vw;
+}
+.container {
+    display: flex;
+}
+.infocontainer {
+    /* background-color: lightblue; */
+    margin: 144px auto;
+    height: 58vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+.devinfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hello{
+font-size: 65px;
+}
+.name{
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+.about{
+   font-size: 40px;
+}
+.buttons button{
+    
+    color: white;
+    background-color: rgb(234, 137, 120);
+    border-radius: 22px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 3px;
+
+}
+.buttons button:hover{
+    background-color: red;
+    color: blue;
+    cursor: pointer;
+}
+.devpic img{
+    height: 58vh;
+    
+}
+.description{
+    font-size: 22px;
+   
+    color: black;
+     font-family: 'Fira Sans', sans-serif;
+  
+}
