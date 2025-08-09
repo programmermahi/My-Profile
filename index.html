@@ -1,41 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohibullah's Protibi </title>
+    <title>Mohibullah's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-    <div class="sidebar">
-       
+    <header>
         <nav>
+            <div class="logo">Mohibullah</div>
             <ul>
-               <li><a href="/contact" target="_blank">Home</a></li>
-               <li><a href="/intro.html">My Intro</a></li>
-               <li><a href="/services.html">Services</a></li>
-               <li><a href="/contact.html">Contact Me </a></li>
-               <li><a href="/blog.html">Blog</a></li> 
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </div>
-    <div class="main">
-       <div class="infocontainer">
-          <div class="devinfo">
-            <div class="hello"> Hi I am </div>
-            <div class="name"> Mohibullah </div>
-            <div class="about"> Web Developer, Software Developer </div>
-            <div class="description">
-                I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. I enjoy coding and continuously learning new technologies to enhance my skills.</div>
-            <div class="buttons">
-                <button>Download CV</button>
-                <button>Contact Me</button>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm Mohibullah</h1>
+            <p class="hero-subtitle">I'm a <span class="typing"></span></p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. I enjoy coding and continuously learning new technologies to enhance my skills.</p>
+                </div>
+                <div class="about-image">
+                    <img src="me.png" alt="Mohibullah">
+                </div>
             </div>
-          </div>
-          <div class="devpic"> <img src="me.png" alt="Md Mohibullah"></div>  
-       </div>
-    </div>
-    </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>A brief description of your project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>A brief description of your project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>A brief description of your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mohibullah. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
