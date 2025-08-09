@@ -1,48 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu animation
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Typing animation
-    new Typed('.typing', {
-        strings: ['Web Developer', 'Software Developer', 'Designer','Software Engineer'],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
 
-    // Animate skill bars on scroll
-    const skillsSection = document.querySelector('#skills');
-    const skillLevels = document.querySelectorAll('.skill-level');
-
-    const animateSkills = () => {
-        skillLevels.forEach(skillLevel => {
-            const level = skillLevel.style.width;
-            skillLevel.style.width = '0';
-            setTimeout(() => {
-                skillLevel.style.width = level;
-            }, 100);
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
         });
-    };
+    });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateSkills();
-                observer.unobserve(entry.target);
-            }
+    // Typed.js animation for hero subtitle
+    if (window.Typed) {
+        new Typed('.typing', {
+            strings: ['Web Developer', 'Designer', 'Freelancer','Software Engineer','Software Developer'],
+            typeSpeed: 80,
+            backSpeed: 40,
+            loop: true
         });
-    }, { threshold: 0.5 });
-
-    if (skillsSection) {
-        observer.observe(skillsSection);
     }
-
-    // Smooth scrolling for nav links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
 });
